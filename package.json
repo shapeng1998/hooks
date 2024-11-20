@@ -1,0 +1,54 @@
+{
+  "name": "hooks",
+  "version": "1.0.0",
+  "description": "A collection of custom hooks for React",
+  "keywords": [
+    "react",
+    "hooks",
+    "typescript"
+  ],
+  "homepage": "https://github.com/shapeng1998/hooks",
+  "bugs": {
+    "url": "https://github.com/shapeng1998/hooks/issues"
+  },
+  "author": "Peng Sha <me@pengsha.dev> (https://pengsha.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shapeng1998/hooks.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run lint && pnpm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack .",
+    "lint": "tsc",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "packageManager": "pnpm@9.14.1",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/react": "^18.3.12",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}

@@ -1,5 +1,5 @@
 ---
-'hooks': patch
+'@pengsha/hooks': patch
 ---
 
 Initial release

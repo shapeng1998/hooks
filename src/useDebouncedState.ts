@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * Debounces a state update.
+ * @param state - The state to debounce.
+ * @param delay - The delay in milliseconds.
+ * @returns The debounced state.
+ */
 export const useDebouncedState = <TState>(
   state: TState,
   delay: number,

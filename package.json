@@ -41,7 +41,7 @@
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "pnpm run ci"
   },
-  "packageManager": "pnpm@9.14.1",
+  "packageManager": "pnpm@9.14.2",
   "peerDependencies": {
     "@types/react": ">=18.0.0",
     "react": ">=18.0.0"

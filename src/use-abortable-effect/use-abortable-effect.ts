@@ -1,4 +1,5 @@
-import { useEffect, type EffectCallback, type DependencyList } from 'react';
+import { useEffect } from 'react';
+import type { EffectCallback, DependencyList } from 'react';
 
 export function useAbortableEffect(
   effect: (signal: AbortSignal) => ReturnType<EffectCallback>,

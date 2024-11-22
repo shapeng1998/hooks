@@ -9,7 +9,7 @@ export function useDebouncedValue<TValue>(value: TValue, delay: number) {
     }, delay);
 
     return () => {
-      clearTimeout(timeoutId);
+      window.clearTimeout(timeoutId);
     };
   }, [value, delay]);
 

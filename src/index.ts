@@ -1,2 +1,2 @@
-export { useDebouncedValue } from './useDebouncedValue/useDebouncedValue';
-export { useAbortableEffect } from './useAbortableEffect/useAbortableEffect';
+export { useDebouncedValue } from './use-debounced-value/use-debounced-value';
+export { useAbortableEffect } from './use-abortable-effect/use-abortable-effect';

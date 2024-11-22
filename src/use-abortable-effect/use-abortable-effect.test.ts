@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import { useAbortableEffect } from './useAbortableEffect';
+import { useAbortableEffect } from './use-abortable-effect';
 
 describe('useAbortableEffect', () => {
   it('should execute effect with abort signal', () => {

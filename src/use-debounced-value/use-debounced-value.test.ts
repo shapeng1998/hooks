@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { useDebouncedValue } from './useDebouncedValue';
+import { useDebouncedValue } from './use-debounced-value';
 
 describe('useDebouncedValue', () => {
   beforeEach(() => {

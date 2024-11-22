@@ -1,1 +1,1 @@
-export { useDebouncedState } from './useDebouncedState';
+export { useDebouncedState } from './useDebouncedValue';

@@ -1,8 +1,8 @@
 import { renderHook, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { useDebouncedState } from './useDebouncedState';
+import { useDebouncedValue } from './useDebouncedValue';
 
-describe('useDebouncedState', () => {
+describe('useDebouncedValue', () => {
   beforeEach(() => {
     vi.useFakeTimers();
   });
@@ -12,13 +12,13 @@ describe('useDebouncedState', () => {
   });
 
   it('should return initial state immediately', () => {
-    const { result } = renderHook(() => useDebouncedState('initial', 1000));
+    const { result } = renderHook(() => useDebouncedValue('initial', 1000));
     expect(result.current).toBe('initial');
   });
 
   it('should debounce state updates', async () => {
     const { result, rerender } = renderHook(
-      ({ value }) => useDebouncedState(value, 1000),
+      ({ value }) => useDebouncedValue(value, 1000),
       {
         initialProps: { value: 'initial' },
       },
@@ -46,7 +46,7 @@ describe('useDebouncedState', () => {
 
   it('should cancel previous debounce on new updates', () => {
     const { result, rerender } = renderHook(
-      ({ value }) => useDebouncedState(value, 1000),
+      ({ value }) => useDebouncedValue(value, 1000),
       {
         initialProps: { value: 'initial' },
       },
@@ -80,7 +80,7 @@ describe('useDebouncedState', () => {
 
   it('should handle different delay values', () => {
     const { result, rerender } = renderHook(
-      ({ value, delay }) => useDebouncedState(value, delay),
+      ({ value, delay }) => useDebouncedValue(value, delay),
       {
         initialProps: { value: 'initial', delay: 1000 },
       },

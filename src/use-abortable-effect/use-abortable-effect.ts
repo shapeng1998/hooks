@@ -1,9 +1,9 @@
 import { useEffect, type EffectCallback, type DependencyList } from 'react';
 
-export const useAbortableEffect = (
+export function useAbortableEffect(
   effect: (signal: AbortSignal) => ReturnType<EffectCallback>,
   deps?: DependencyList,
-) => {
+) {
   useEffect(() => {
     const controller = new AbortController();
     const cleanup = effect(controller.signal);
@@ -13,4 +13,4 @@ export const useAbortableEffect = (
       cleanup?.();
     };
   }, deps);
-};
+}

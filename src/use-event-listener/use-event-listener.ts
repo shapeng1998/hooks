@@ -1,1 +1,2 @@
-export const useEventListener = () => {};
+// TODO: Implement useEventListener
+export function useEventListener() {}

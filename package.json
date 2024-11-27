@@ -31,7 +31,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run lint && pnpm run test",
+    "ci": "bun run build && bun run check-format && bun run check-exports && bun run lint && bun run test",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack .",
@@ -39,9 +39,9 @@
     "test": "vitest run",
     "dev": "vitest",
     "local-release": "changeset version && changeset publish",
-    "prepublishOnly": "pnpm run ci"
+    "prepublishOnly": "bun run ci"
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "bun@1.1.37",
   "peerDependencies": {
     "@types/react": ">=18.0.0",
     "react": ">=18.0.0"

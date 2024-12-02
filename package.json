@@ -41,7 +41,7 @@
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "bun run ci"
   },
-  "packageManager": "bun@1.1.37",
+  "packageManager": "bun@1.1.38",
   "peerDependencies": {
     "@types/react": ">=18.0.0",
     "react": ">=18.0.0"

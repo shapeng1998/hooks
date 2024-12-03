@@ -13,7 +13,7 @@ export function useEvent<TCallback extends AnyFunction>(
   ) as TCallback;
 }
 
-function useLatestRef<T>(value: T) {
+function useLatestRef<TValue>(value: TValue) {
   const ref = useRef(value);
   ref.current = value;
   return ref;
